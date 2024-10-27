@@ -37,7 +37,7 @@ class Projects extends Component {
       method: 'GET',
     }
     const response = await fetch(url, options)
-    if (response.ok === false) {
+    if (response.ok === true) {
       const data = await response.json()
       const formattedData = data.projects.map(each => ({
         id: each.id,
